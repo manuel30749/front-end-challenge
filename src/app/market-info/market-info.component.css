@@ -1,0 +1,32 @@
+.marketInfo {
+  background-color: #191e23;
+  height: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #86af6b;
+  font-size: 125%;
+}
+
+#marketSelection {
+  margin: 12px 0px 10px 30px;
+}
+
+.marketDinaInfo {
+  margin: 13px 0px 10px 0;
+  padding: 0 0 0 0;
+}
+
+.marketDinaInfo label {
+  margin: 0 0 0 50px;
+  color: #4e5863;
+}
+
+.marketDinaInfo span {
+  color: #b0bac1;
+}

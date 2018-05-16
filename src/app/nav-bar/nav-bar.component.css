@@ -1,0 +1,114 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 25px;
+  margin: 14px 30px 0 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(201, 205, 207);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #191e23;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #eee;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+nav {
+  background-color: #313d4c;
+  border-radius: 0%;
+  margin-bottom: 0%;
+  border: none;
+}
+
+.navbar-brand {
+  padding: 10px 0 4px 30px;
+}
+
+a {
+  padding: 15px 0px 15px 30px;
+}
+
+label {
+  padding: 15px 20px 0px 30px;
+  color: gray;
+  font-size: 15px;
+}
+
+#labview {
+  padding: 0 0 0 0;
+}
+
+#moon {
+  width: 13px;
+  height: 13px;
+  border-radius: 70%;
+  box-shadow: 0px 4px 0px 0px gray;
+  -webkit-transform: rotateZ(60deg);
+  transform: rotateZ(60deg);
+  -webkit-transform-origin: 100% 100% 0deg;
+  transform-origin: 100% 100% 0deg;
+  margin: 4px 0 0 15px;
+}
+
+#circleImg {
+  height: 45px;
+  width: 45px;
+  background-color: gray;
+  border-radius: 50%;
+  padding: 2px 0 0 2px;
+  margin: 4px 0 4px 0;
+}
+
+#profileImg {
+  border: 1px solid #191e23;
+  height: 41px;
+  width: 41px;
+  background-color: grey;
+  border-radius: 50%;
+}
+

@@ -1,0 +1,17 @@
+.barTitle span {
+  background-color: #313d4c;
+  color: #b0bac1;
+  padding: 8px 210px 8px 12px;
+  margin: 18px;
+  position: absolute;
+}
+
+.tableLastTrades div {
+  margin-top: 55px;
+  margin-left: 13px;
+}
+
+.tableLastTrades div span {
+  color: #b0bac1;
+  font-size: 11px;
+}

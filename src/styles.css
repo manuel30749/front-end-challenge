@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #252c36;
+  font-family: DINPro;
+  src: url("/assets/fonts/DINPro-Medium.otf");
+  src: url("/assets/fonts/DINPro-Medium.woff") format("woff"),
+       url("/assets/fonts/DINPro-Medium.ttf") format("truetype");
+}
+
