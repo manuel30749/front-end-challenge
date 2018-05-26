@@ -4,11 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { Trade } from '../trade';
 
 @Component({
-  selector: 'app-last-trades',
-  templateUrl: './last-trades.component.html',
-  styleUrls: ['./last-trades.component.css']
+  selector: 'app-buy-sell-postures',
+  templateUrl: './buy-sell-postures.component.html',
+  styleUrls: ['./buy-sell-postures.component.css']
 })
-export class LastTradesComponent implements OnInit {
+export class BuySellPosturesComponent implements OnInit {
 
   trades: Trade;
 
@@ -18,12 +18,12 @@ export class LastTradesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getTrades();
+    this.getTrader();
   }
 
-  getTrades(): void {
+  getTrader(): void {
     let book = this.route.snapshot.paramMap.get('book');
-    console.log('route: ' + book);
+    console.log('getTrader book: ' + book);
     if (book == null) {
       book = 'btc_mxn';
     }
@@ -32,7 +32,6 @@ export class LastTradesComponent implements OnInit {
       console.log(trades);
       this.trades = trades;
     });
-
   }
 
 }

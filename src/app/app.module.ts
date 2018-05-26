@@ -1,11 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MarketInfoComponent } from './market-info/market-info.component';
 import { LastTradesComponent } from './last-trades/last-trades.component';
+import { BitsoService } from './bitso.service';
+import { AppRoutingModule } from './app-routing.module';
+import { MainChartComponent } from './main-chart/main-chart.component';
+import { BuySellPosturesComponent } from './buy-sell-postures/buy-sell-postures.component';
+import { MarketsSidebarComponent } from './markets-sidebar/markets-sidebar.component';
 
 
 @NgModule({
@@ -13,12 +19,18 @@ import { LastTradesComponent } from './last-trades/last-trades.component';
     AppComponent,
     NavBarComponent,
     MarketInfoComponent,
-    LastTradesComponent
+    LastTradesComponent,
+    MainChartComponent,
+    BuySellPosturesComponent,
+    MarketsSidebarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [BitsoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

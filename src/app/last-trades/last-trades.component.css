@@ -1,17 +1,47 @@
-.barTitle span {
+.barTitle {
   background-color: #313d4c;
   color: #b0bac1;
-  padding: 8px 210px 8px 12px;
-  margin: 18px;
-  position: absolute;
+  padding: 8px 100px 8px 12px;
+  width: 250px;
 }
 
-.tableLastTrades div {
-  margin-top: 55px;
-  margin-left: 13px;
+.barTitle {
+  margin-top: 18px;
+  margin-left: 25px;
 }
 
-.tableLastTrades div span {
+table, tr, td {
+  /*border: 2px solid gray;*/
+  color: #4e5863;
+  padding: 5px;
+  font-size: 13px;
+  text-align: center;
+}
+table, tr, th {
   color: #b0bac1;
   font-size: 11px;
+  text-align: center;
+  padding: 5px;
 }
+.coin {
+  color: #4e5863;
+}
+table {
+  margin-left: 25px;
+  margin-top: 2px;
+}
+table tr:hover {
+  background-color: #384555;
+}
+
+table .lt-price-buy:hover {
+  color: #80c156;
+}
+
+table .lt-price-sell:hover {
+  color: #cc4458;
+}
+
+
+
+

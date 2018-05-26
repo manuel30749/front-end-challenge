@@ -14,7 +14,7 @@ li a {
 }
 
 #marketSelection {
-  margin: 12px 0px 10px 30px;
+  margin: 12px 0px 10px 40px;
 }
 
 .marketDinaInfo {
@@ -28,5 +28,18 @@ li a {
 }
 
 .marketDinaInfo span {
+  color: #b0bac1;
+}
+
+.drp-menu {
+  background-color: #191e23;
+  border-bottom: 3px solid #86af6b;
+}
+.drp-menu li a {
+  color: #b0bac1;
+  font-size: 15px;
+}
+.drp-menu li a:hover {
+  background-color: #313d4c;
   color: #b0bac1;
 }

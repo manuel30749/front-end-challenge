@@ -1,10 +1,18 @@
-<div class="row">
-  <div class="col-md-4">
-    <div class="barTitle"><span>ÚLTIMOS TRADES</span></div>
-    <div class="tableLastTrades">
-      <div class="col-xs-2"><span>HORA</span></div>
-      <div class="col-xs-3 text-center"><span>MXN PRECIO</span></div>
-      <div class="col-xs-3 text-center"><span>BTC MONTO</span></div>
-    </div>
-  </div>
-</div>
+<div class="barTitle">ÚLTIMOS TRADES</div>
+<table style="width: 250px;">
+  <tr>
+    <th><span>HORA</span></th>
+    <th style="padding-left: 10px;"></th>
+    <th><span class="coin">MXN</span> PRECIO</th>
+    <th style="padding-left: 10px;"></th>
+    <th><span class="coin">BTC</span> MONTO</th>
+  </tr>
+  <tr *ngFor="let trade of trades">
+    <td>{{ trade.created_at.substr(11, 8) }}</td>
+    <td></td>
+    <td *ngIf="trade.maker_side == 'buy'" class="lt-price-buy" style="color: #466830">{{ trade.price }}</td>
+    <td *ngIf="trade.maker_side == 'sell'" class="lt-price-sell" style="color: #722837">{{ trade.price }}</td>
+    <td></td>
+    <td>{{ trade.amount }}</td>
+  </tr>
+</table>
