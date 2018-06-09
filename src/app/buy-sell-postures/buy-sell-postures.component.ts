@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BitsoService } from '../bitso.service';
 import { ActivatedRoute } from '@angular/router';
-import { Trade } from '../trade';
+import { OrderBook } from '../orderbook';
+import { Ticker } from '../ticker';
 
 @Component({
   selector: 'app-buy-sell-postures',
@@ -10,7 +11,8 @@ import { Trade } from '../trade';
 })
 export class BuySellPosturesComponent implements OnInit {
 
-  trades: Trade;
+  orderBook: OrderBook;
+  tickers: Ticker;
 
   constructor(
     private bitsoService: BitsoService,
@@ -18,20 +20,34 @@ export class BuySellPosturesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getTrader();
+    this.getTicker();
+    this.getOrderBook();
   }
 
-  getTrader(): void {
+  getTicker(): void {
     let book = this.route.snapshot.paramMap.get('book');
-    console.log('getTrader book: ' + book);
+    console.log('Buy-sell-posture: getTicker() book: ' + book);
     if (book == null) {
       book = 'btc_mxn';
     }
-    this.bitsoService.getTrades(book)
-    .subscribe(trades => {
-      console.log(trades);
-      this.trades = trades;
-    });
+    this.bitsoService.getTicker(book)
+      .subscribe(tickers => {
+        console.log(tickers);
+        this.tickers = tickers;
+      }
+    );
   }
 
+  getOrderBook(): void {
+    let book = this.route.snapshot.paramMap.get('book');
+    console.log('Buy-sell-posture: getOrderBook() book: ' + book);
+    if (book == null) {
+      book = 'btc_mxn';
+    }
+    this.bitsoService.getOrderBook(book)
+    .subscribe(orderBook => {
+      console.log(orderBook);
+      this.orderBook = orderBook;
+    });
+  }
 }

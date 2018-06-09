@@ -1,27 +1,47 @@
-<div class="marketInfo">
-  <div class="col-md-2">
-    <li id="marketSelection" class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BTC/MXN <span class="caret"></span></a>
-      <ul class="dropdown-menu drp-menu">
-        <li><a (click)="getTicker()" routerLink="/btc_mxn">BTC/MXN</a></li>
-        <li><a (click)="getTicker()" routerLink="/eth_mxn">ETH/MXN</a></li>
-        <li><a (click)="getTicker()" routerLink="/xrp_mxn">XRP/MXN</a></li>
-        <li><a (click)="getTicker()" routerLink="/ltc_mxn">LTC/MXN</a></li>
-        <li><a (click)="getTicker()" routerLink="/bch_mxn">BCH/MXN</a></li>
-        <li><a (click)="getTicker()" routerLink="/xrp_btc">XRP/BTC</a></li>
-        <li><a (click)="getTicker()" routerLink="/eth_btc">ETH/BTC</a></li>
-        <li><a (click)="getTicker()" routerLink="/bch_btc">BCH/BTC</a></li>
-        <li><a (click)="getTicker()" routerLink="/ltc_btc">LTC/BTC</a></li>
-      </ul>
-    </li>
-  </div>
-  <div class="col-md-8">
-    <div class="marketDinaInfo">
-      <label for="todays volumen">Volumen 24 hrs.</label><span> {{ tickers.volume }}</span><span> BTC</span>
-      <label for="maximun todays volumen">Max.</label><span> {{ tickers.high }}</span><span> MXN</span>
-      <label for="minimun todays volumen">Min.</label><span> {{ tickers.low }}</span><span> MXN</span>
-      <label for="variation">Variación</label><span> +{{ tickers.vwap }}</span><span> MXN</span><span> (1.4%)</span>
+<div class="row">
+  <div class="marketInfo">
+    <div class="col-md-2">
+      <li id="marketSelection" class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BTC/MXN <span class="caret"></span></a>
+        <ul class="dropdown-menu drp-menu">
+          <li><a (click)="getTicker()" routerLink="/btc_mxn">BTC/MXN</a></li>
+          <li><a (click)="getTicker()" routerLink="/eth_mxn">ETH/MXN</a></li>
+          <li><a (click)="getTicker()" routerLink="/xrp_mxn">XRP/MXN</a></li>
+          <li><a (click)="getTicker()" routerLink="/ltc_mxn">LTC/MXN</a></li>
+          <li><a (click)="getTicker()" routerLink="/bch_mxn">BCH/MXN</a></li>
+          <li><a (click)="getTicker()" routerLink="/xrp_btc">XRP/BTC</a></li>
+          <li><a (click)="getTicker()" routerLink="/eth_btc">ETH/BTC</a></li>
+          <li><a (click)="getTicker()" routerLink="/bch_btc">BCH/BTC</a></li>
+          <li><a (click)="getTicker()" routerLink="/ltc_btc">LTC/BTC</a></li>
+        </ul>
+      </li>
     </div>
+    <div class="col-md-8">
+      <div class="marketDinaInfo">
+        <label for="todays volumen">Volumen 24 hrs.</label><span> {{ tickers.volume }}</span><span> BTC</span>
+        <label for="maximun todays volumen">Max.</label><span> {{ tickers.high }}</span><span> MXN</span>
+        <label for="minimun todays volumen">Min.</label><span> {{ tickers.low }}</span><span> MXN</span>
+        <label for="variation">Variación</label><span> +{{ tickers.vwap }}</span><span> MXN</span><span> (1.4%)</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">
+      <app-last-trades></app-last-trades>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <div class="col-md-9">
+          <app-main-chart></app-main-chart>
+      </div>
+    </div>
+    <div class="row">
+      <app-buy-sell-postures></app-buy-sell-postures>
+    </div>
+  </div>
+  <div class="col-xs-1" style="z-index: -1;">
+    <app-markets-sidebar></app-markets-sidebar>
   </div>
 </div>
 

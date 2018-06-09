@@ -1,0 +1,86 @@
+@import "../less/vars.less";
+
+.buy, .sales {
+  background-color: @Dark-Navy;
+  color: @Sidebar-Light-Text;
+  width: 600px;
+}
+
+.buy {
+  margin: 10px 0 0 17px;
+  padding: 8px 0 8px 8px;
+}
+
+.sales {
+  margin: 10px 0 0 0;
+  padding: 8px 0 8px 10px;
+}
+
+.coinBuy {
+  color: #596779;
+  font-size: 12px;
+}
+
+.coinSell {
+  .coinBuy;
+  padding-right: 322px;
+}
+
+.amountPosture {
+  padding-left: 308px;
+}
+
+.buyTable {
+  margin-left: 17px;
+}
+
+table {
+  tr {
+    text-align: center;
+    padding: 5px;
+    .buyPrice {
+      color: @Medium-Green;
+    }
+    .sellPrice {
+      color: @Medium-Red;
+    }
+    td {
+      color: @Dark-Text;
+      font-weight: normal;
+    }
+    th {
+      color: @Sidebar-Text;
+      font-size: 12px;
+      text-align: center;
+      padding: 5px;
+      font-weight: normal;
+      span {
+        color: @Dark-Text;
+        font-size: 11px;
+      }
+    }
+  }
+  .buyRows:hover {
+    background-color: @Dark-Green;
+    .sumBuyPosture, .orderAmountBuyPosture, .valueBuyPosture {
+      color: @Light-Text;
+    }
+  }
+  .salesRows:hover {
+    background-color: @Dark-Red;
+  }
+}
+
+.separator {
+  width: 70px;
+}
+
+.buySection:hover > .buy {
+  border-left: 4px solid @Medium-Green;
+  background-color: @Regular-Navy;
+}
+
+.salesSection:hover > .sales {
+  border-right: 4px solid @Medium-Red;
+  background-color: @Regular-Navy;
+}

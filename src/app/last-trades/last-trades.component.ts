@@ -32,7 +32,5 @@ export class LastTradesComponent implements OnInit {
       console.log(trades);
       this.trades = trades;
     });
-
   }
-
 }

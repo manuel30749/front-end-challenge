@@ -8,12 +8,15 @@ import { Book } from './book';
 import { Ticker } from './ticker';
 import 'rxjs/add/operator/map';
 import { Trade } from './trade';
+import { OrderBook } from './orderbook';
+import { ENGINE_METHOD_ALL } from 'constants';
 
 @Injectable()
 export class BitsoService {
 
   private tickerUrl = 'https://api.bitso.com/v3/ticker';
   private tradesUrl = 'https://api.bitso.com/v3/trades';
+  private orderBookUrl = 'https://api.bitso.com/v3/order_book';
   data: any = {};
 
   constructor(
@@ -21,7 +24,7 @@ export class BitsoService {
   ) { }
 
   getTicker(book: string): Observable<Ticker> {
-    console.log('Entra a service con book:' + book);
+    console.log('Entra a service con book: ' + book);
     return this.http.get(`${this.tickerUrl}/?book=${book}`)
     .map((res: Response) => res.json().payload)
     .pipe(
@@ -30,11 +33,20 @@ export class BitsoService {
   }
 
   getTrades(book: string): Observable<Trade> {
-    console.log('Entra a service getTrade con book:' + book);
+    console.log('Entra a service getTrade con book: ' + book);
     return this.http.get(`${this.tradesUrl}/?book=${book}`)
     .map((res: Response) => res.json().payload)
     .pipe(
       catchError(this.handleError('getTrade', []))
+    );
+  }
+
+  getOrderBook(book: string): Observable<OrderBook> {
+    console.log('Entra a service getOrderBook con book: ' + book);
+    return this.http.get(`${this.orderBookUrl}/?book=${book}`)
+    .map((res: Response) => res.json().payload)
+    .pipe(
+      catchError(this.handleError('getOrderBook', []))
     );
   }
 

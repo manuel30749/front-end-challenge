@@ -1,47 +1,66 @@
+/**
+* @author: Ing. José Manuel Tapia González
+* @contact: manuel30749@gmail.com
+*
+* Description:
+*
+**/
+/*
+ * Navy color variables */
+/*
+ * Text color */
+/*
+ * Sidebar color variables */
+/*
+ * Red color variables */
+/*
+ * Green color variables */
+/*
+ * Other colors */
 .barTitle {
-  background-color: #313d4c;
+  background-color: #252c36;
   color: #b0bac1;
   padding: 8px 100px 8px 12px;
   width: 250px;
-}
-
-.barTitle {
   margin-top: 18px;
   margin-left: 25px;
 }
-
-table, tr, td {
-  /*border: 2px solid gray;*/
-  color: #4e5863;
-  padding: 5px;
-  font-size: 13px;
-  text-align: center;
+table {
+  width: 250px;
+  margin-left: 25px;
+  margin-top: 2px;
 }
-table, tr, th {
+table tr th {
   color: #b0bac1;
   font-size: 11px;
   text-align: center;
   padding: 5px;
+  font-weight: normal;
 }
-.coin {
+table tr td {
   color: #4e5863;
+  font-size: 13px;
+  text-align: center;
+  padding: 5px;
 }
-table {
-  margin-left: 25px;
-  margin-top: 2px;
+table tr .lt-price-buy {
+  color: #466830;
+}
+table tr .lt-price-sell {
+  color: #722837;
 }
 table tr:hover {
   background-color: #384555;
 }
-
-table .lt-price-buy:hover {
+table tr:hover .lt-price-buy {
   color: #80c156;
 }
-
-table .lt-price-sell:hover {
+table tr:hover .lt-price-sell {
   color: #cc4458;
 }
-
-
-
-
+table tr:hover .lt-withe-text {
+  color: #b0bac1;
+}
+.coin {
+  color: #4e5863;
+}

@@ -1,0 +1,60 @@
+/**
+* @author: Ing. José Manuel Tapia González
+* @contact: manuel30749@gmail.com
+*
+* Description:
+*
+**/
+@import "../less/vars.less";
+
+.barTitle {
+  background-color: @Regular-Navy;
+  color: @Light-Text;
+  padding: 8px 100px 8px 12px;
+  width: 250px;
+  margin-top: 18px;
+  margin-left: 25px;
+}
+
+table {
+  width: 250px;
+  margin-left: 25px;
+  margin-top: 2px;
+  tr {
+    th {
+      color: @Light-Text;
+      font-size: 11px;
+      text-align: center;
+      padding: 5px;
+      font-weight: normal;
+    }
+    td {
+      color: @Dark-Text;
+      font-size: 13px;
+      text-align: center;
+      padding: 5px;
+    }
+    .lt-price-buy {
+      color: @Dark-Green;
+    }
+    .lt-price-sell {
+      color: @Dark-Red;
+    }
+  }
+  tr:hover {
+    background-color: @Medium-Navy;
+    .lt-price-buy{
+      color: @Regular-Green;
+    }
+    .lt-price-sell {
+      color: @Regular-Red;
+    }
+    .lt-withe-text {
+      color: @Sidebar-Light-Text;
+    }
+  }
+}
+
+.coin {
+  color: @Dark-Text;
+}

@@ -5,18 +5,8 @@
 * Description:
 *
 **/
-/*
- * Navy color variables */
-/*
- * Text color */
-/*
- * Sidebar color variables */
-/*
- * Red color variables */
-/*
- * Green color variables */
-/*
- * Other colors */
+@import "../less/vars.less";
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -25,10 +15,12 @@
   height: 25px;
   margin: 14px 30px 0 10px;
 }
+
 /* Hide default HTML checkbox */
 .switch input {
-  display: none;
+  display:none;
 }
+
 /* The slider */
 .slider {
   position: absolute;
@@ -37,10 +29,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #cccccc;
+  background-color: @Neutral-Gray;
   -webkit-transition: .4s;
   transition: .4s;
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -48,98 +41,116 @@
   width: 17px;
   left: 4px;
   bottom: 4px;
-  background-color: #191e23;
+  background-color: @Background-Navy;
   -webkit-transition: .4s;
   transition: .4s;
   z-index: 1;
 }
+
 input:checked + .slider {
-  background-color: #252c36;
+  background-color: @Regular-Navy;
 }
+
 input:focus + .slider {
-  box-shadow: 0 0 1px #727c84;
+  box-shadow: 0 0 1px @Sidebar-Header;
 }
+
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
+
 .slider.round:before {
   border-radius: 50%;
 }
+
 nav {
-  background-color: #313d4c;
+  background-color: @Navy-Headers;
   border-radius: 0%;
   margin-bottom: 0%;
   border: none;
 }
+
 .navbar-brand {
   padding: 10px 0 4px 55px;
 }
+
 a {
   padding: 15px 0px 15px 30px;
 }
+
 label {
   padding: 15px 20px 0px 30px;
-  color: #727c84;
+  color: @Sidebar-Header;
   font-size: 15px;
   font-weight: normal;
 }
+
 #labview {
   padding: 0 0 0 0;
 }
+
 #moon {
   width: 13px;
   height: 13px;
   border-radius: 70%;
-  box-shadow: 0px 4px 0px 0px #cccccc;
+  box-shadow: 0px 4px 0px 0px @Neutral-Gray;
   -webkit-transform: rotateZ(60deg);
   transform: rotateZ(60deg);
   -webkit-transform-origin: 100% 100% 0deg;
   transform-origin: 100% 100% 0deg;
   margin: 4px 0 0 15px;
 }
+
 #circleImg {
   height: 45px;
   width: 45px;
-  background-color: #727c84;
+  background-color: @Sidebar-Header;
   border-radius: 50%;
   padding: 2px 0 0 2px;
   margin: 4px 0 4px 0;
 }
+
 #profileImg {
-  border: 1px solid #191e23;
+  border: 1px solid @Background-Navy;
   height: 41px;
   width: 41px;
-  background-color: #727c84;
+  background-color: @Sidebar-Header;
   border-radius: 50%;
 }
+
 .drp-menu {
-  background-color: #191e23;
-  border-bottom: 3px solid #86af6b;
+  background-color: @Background-Navy;
+  border-bottom: 3px solid @Medium-Green;
 }
 .drp-menu li a {
-  color: #b0bac1;
+  color: @Light-Text;
   font-size: 15px;
 }
 .drp-menu li a:hover {
-  background-color: #313d4c;
-  color: #b0bac1;
+  background-color: @Navy-Headers;
+  color: @Light-Text;
 }
+
 .drp-price:hover .drp-price-menu {
   display: block;
   margin-top: 0;
 }
+
 .drp-price:hover > a {
-  background-color: #191e23;
+  background-color: @Background-Navy;
 }
+
 .drp-price:active > a {
-  background-color: #191e23;
+  background-color: @Background-Navy;
 }
+
 /*.dropdown-toggle:not( :hover ) > .drp-menu {
   display: none;
 }*/
